@@ -16,8 +16,7 @@ client.on('error', (err) => {
 //
 const fetchWeatherData = async (location: string) => {
     const unitSystem = "us"
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${WEATHER_API_KEY}`;
-  `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=${unitSystem}&key=${WEATHER_API_KEY}&contentType=json`
+  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=${unitSystem}&key=${WEATHER_API_KEY}&contentType=json`
   const response = await axios.get(url);
   return response.data;
 };
